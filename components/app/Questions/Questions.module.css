@@ -1,0 +1,56 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.AllQuestions {
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    margin: 1rem 0;
+    padding: 0.8rem 0;
+}
+
+.qestion {
+    padding-bottom: 0.5rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+.qestion:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.qestion li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.qestion p {
+    cursor: pointer;
+    margin: 6px 1.8rem 0 1.8rem;
+    color: #696969;
+    font-size: 14px;
+    text-align: justify;
+}

@@ -1,0 +1,79 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.inputPrice {
+    margin: 1rem 0;
+}
+
+.inputPrice input {
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 1.2px solid rgb(230, 230, 230);
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.inputPrice input:focus {
+    border: 1.2px solid rgb(79, 101, 239);
+}
+
+.inputPrice label {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.priceBox h6 {
+    color: #8b8b8b;
+    margin-bottom: 0.5rem;
+}
+
+.priceBox div {
+    display: flex;
+    align-items: center;
+}
+
+.priceBox div span {
+    width: 100%;
+    border: 1px solid rgb(223, 223, 223);
+    text-align: center;
+    border-radius: 30px;
+    font-size: 13px;
+    padding: 0.2rem 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnSendData {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+}
+
+.btnSendData:hover {
+    background-color: #052c47;
+    transition: 0.4s;
+}

@@ -1,0 +1,67 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.listNotBox {
+    margin: 1rem 0 85px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemNot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.7rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin: 0.6rem 0;
+}
+
+.disNot {
+    display: flex;
+    align-items: center;
+}
+
+.disNot svg {
+    color: var(--main_color_litgh);
+    font-size: 34px;
+    margin-left: 4px;
+}
+
+.disNot span {
+    font-size: 15px;
+    margin: 0 0.4rem;
+}
+
+.IconLeNot {
+    display: flex;
+}
+
+.IconLeNot button {
+    margin-top: auto;
+    color: rgb(177, 0, 0);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tooltip {
+    font-size: 10px !important;
+}

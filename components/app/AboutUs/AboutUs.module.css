@@ -1,0 +1,54 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}
+.DisBox{
+    margin-top: 2rem;
+}
+.DisBox p {
+    text-align: justify;
+    margin: 0.9rem 0;
+
+}
+.socialMedia,.call {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.8rem;
+}
+.socialMedia div a ,.call div a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.socialMedia div a svg ,.call div a svg{
+    color: var(--main_color);
+    font-size: 24px;
+}
+.socialMedia div a span,.call div a span{
+    color: var(--main_color);
+    font-size: 12.5px;
+    margin-top: 5px;
+}
+.call div a{
+    flex-direction: row ;
+}
+.call div a span{
+    margin-left: 4px;
+    margin-top: 0;
+}

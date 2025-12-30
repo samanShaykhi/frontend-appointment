@@ -1,0 +1,199 @@
+.headPageCenter {
+    background: linear-gradient(0deg, rgb(218, 229, 255) 0%, rgb(218, 249, 255) 100%);
+    padding: 1rem 0;
+}
+
+.headContentTitle {
+    text-align: center;
+    font-weight: 600;
+}
+
+.ConsultantBox {
+    text-align: center;
+    background-color: #5547ff;
+    border-radius: 25px;
+    padding: 2rem 2.25rem;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.ConsultantBox h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+.ConsultantBox a {
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    margin-top: 1rem;
+    border: 1.5px solid #fff;
+    padding: 0.5rem 1.25rem;
+    border-radius: 30px;
+    transition: all 0.4s;
+    color: #fff;
+}
+
+.ConsultantBox a:hover {
+    transition: all 0.4s;
+    background-color: #fff;
+    color: #333;
+}
+
+.ConsultantBox a span {
+    font-size: 16px;
+}
+
+.ConsultantBox a svg {
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+.boxInfHead {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1rem;
+
+}
+
+.boxInfHead a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.boxInfHead img {
+    margin-left: 2px;
+}
+
+/**Consultants */
+.BoxConsultants {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ItemConsultant img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ItemConsultant {
+    min-height: 294px;
+    width: 48%;
+    background: linear-gradient(0deg, rgba(67, 67, 67, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    position: relative;
+    border-radius: 28px;
+    overflow: hidden;
+    margin: 0.5rem 0;
+}
+
+.ItemConsultant div {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(56, 56, 55, 0.1));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    color: #fff;
+    padding: 10px 14px 10px 0;
+    font-size: 12px;
+}
+
+.ConsultantsTitle {
+    margin: 0.5rem 0;
+    color: var(--main_color);
+    font-size: var(--foont_size_title);
+}
+
+/**Consultants */
+
+/**category */
+.categoryTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoryTitle a {
+    color: var(--main_color);
+}
+
+.sectionCategory {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sectionCategory div {
+    margin: 14px 8px;
+}
+
+.sectionCategory div span {
+    border: 1.2px solid rgb(212 212 212);
+    border-radius: 12px;
+    padding: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/**category */
+
+/** why we */
+
+.infMEBox {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 20px 45px 0px rgba(204, 204, 204, 0.2);
+    padding: 0.5rem;
+}
+
+.infMEBox svg {
+    color: #72c3ee;
+    font-size: 24px;
+}
+
+.infMEBox span {
+    display: block;
+    margin: 8px 0;
+}
+
+/** why we */
+
+/** articles */
+
+.BoxArticleS img {
+    border-radius: 25px;
+}
+
+.BoxArticleS h4 {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #333;
+}
+
+.btnMorDis {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+    text-align: center;
+    border: 1.5px solid var(--main_color);
+    margin: 1rem 0;
+    transition: 0.4s;
+    color: #333;
+}
+
+.btnMorDis:hover {
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+}
+
+/** articles */

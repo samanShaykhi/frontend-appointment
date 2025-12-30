@@ -1,0 +1,20 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}

@@ -1,0 +1,86 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.Hours {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Hours span {
+    margin: 0.4rem 0.5rem;
+    cursor: pointer;
+    border: 1.2px solid var(--main_color_bg);
+    padding: 0.2rem;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.Hours span:hover,
+.ActiveHours {
+    background-color: var(--main_color_bg);
+    transition: 0.3s;
+    color: #fff;
+}
+
+.dateBox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.itemDate {
+    margin: 0.5rem;
+}
+
+.btnSendWork,
+.btnSendWorkNodrop {
+    padding: 0.5rem;
+    border-radius: 12px;
+    text-align: center;
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+}
+
+.btnSendWorkNodrop {
+    cursor: no-drop;
+    opacity: 0.6;
+    background-color: rgb(146, 146, 146) !important;
+}
+
+.sendDate,
+.sendDateNodrap {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+    margin-top: 1rem;
+}
+
+.sendDateNodrap {
+    cursor: no-drop;
+    opacity: 0.6;
+    background-color: rgb(146, 146, 146) !important;
+}

@@ -1,0 +1,14 @@
+.tabel table {
+    width: 100%;
+}
+
+.tabel td,
+.tabel th {
+    border: 1px solid #dddddd;
+    text-align: right;
+    padding: 8px;
+}
+
+.tabel tbody tr:nth-child(even) {
+    background-color: #dddddd;
+}

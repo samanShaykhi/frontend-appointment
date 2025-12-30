@@ -1,0 +1,274 @@
+/* UploadForm.module.css */
+
+.container {
+  width: 100%;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  direction: rtl;
+}
+
+/* drop area */
+.dropArea {
+  border: 2px dashed rgba(99, 102, 241, 0.22);
+  border-radius: 12px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.02), rgba(6, 182, 212, 0.01));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform .12s ease, border-color .16s ease, background .16s ease;
+  position: relative;
+}
+
+.dropArea:hover {
+  transform: translateY(-3px);
+}
+
+.dropActive {
+  border-color: rgba(99, 102, 241, 0.6);
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.06), rgba(6, 182, 212, 0.03));
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.06);
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.placeholder {
+  text-align: center;
+  color: #0f1724;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.icon {
+  font-size: 34px;
+  filter: drop-shadow(0 6px 18px rgba(6, 182, 212, 0.08));
+}
+
+.title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.sub {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* button inside placeholder */
+.chooseBtn {
+  margin-top: 8px;
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: #fff;
+  border: 0;
+  padding: 9px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.chooseBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.08);
+}
+
+/* error */
+.error {
+  color: #ef4444;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 8px;
+}
+
+/* preview area */
+.previewWrap {
+  min-height: 90px;
+}
+
+.empty {
+  padding: 18px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #fbfdff, #ffffff);
+  color: #6b7280;
+  text-align: center;
+}
+
+/* grid of thumbnails */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+/* single card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 8px 20px rgba(2, 6, 23, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(2, 6, 23, 0.08);
+}
+
+.imgWrap {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: #f8fafc;
+}
+
+.thumb {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* progress bar overlay */
+.progressBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background: rgba(2, 6, 23, 0.06);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #06b6d4, #4f46e5);
+  width: 0%;
+  transition: width .16s linear;
+}
+
+/* done badge */
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #16a34a;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 100%;
+  padding: 0.2rem;
+}
+
+/* meta row */
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 8px;
+}
+
+.name {
+  font-size: 13px;
+  color: #0f1724;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.smallBtn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.smallBtn:hover {
+  background: rgba(239, 68, 68, 0.06);
+  transform: scale(1.02);
+}
+
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.btnGhost {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+
+
+/* responsive */
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .imgWrap {
+    height: 92px;
+  }
+}
+
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .chooseBtn {
+    padding: 8px 12px;
+  }
+}

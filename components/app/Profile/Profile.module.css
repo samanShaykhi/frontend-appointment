@@ -1,0 +1,77 @@
+.ProgileBG {
+    background: rgb(22, 180, 216);
+    background: linear-gradient(90deg, rgba(22, 180, 216, 1) 0%, rgba(203, 180, 254, 1) 100%);
+    padding: 1rem 0;
+    height: 100vh;
+}
+
+.ProfileMeBox {
+    background-color: #fff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 18px;
+}
+
+.ProfileMeBox a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PropertisProfileMe {
+    display: flex;
+    align-items: center;
+}
+
+.PropertisProfileMe div svg {
+    color: rgb(22, 180, 216);
+    font-size: 55px;
+    margin-left: 0.8rem;
+}
+
+.PropertisProfileMe div span {
+    display: block;
+    color: rgb(22, 180, 216);
+}
+
+.PropertisProfileMe div span:first-child {
+    font-size: 18px;
+
+}
+
+.PropertisProfileMe div span:last-child {
+    font-size: 14px;
+}
+
+.oderPropertis {
+    margin-top: 1rem;
+    background-color: #fff;
+    padding: 0.5rem 0.8rem;
+    border-radius: 18px;
+}
+
+.PItem {
+    margin: 1.5rem 0;
+}
+
+.PItem a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PItem svg {
+    color: #333;
+}
+.PItem span {
+    color: rgb(22, 180, 216);
+}
+
+.PItem div:first-child svg {
+    margin-left: 0.6rem;
+    font-size: 24px;
+}
+
+.PItem div:first-child {
+    display: flex;
+    align-items: center;
+}

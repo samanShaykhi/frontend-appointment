@@ -1,0 +1,343 @@
+.btnHeadVideo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 18px;
+    padding: 0 1rem;
+}
+
+.btnHeadVideo svg {
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.btnHeadVideo svg:first-child {
+    background-color: #fff;
+    padding: 8px;
+    font-size: 38px;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.SpecificationsConsultant {
+    margin: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infConsultant h3 {
+    font-size: 12.5px;
+    color: #595959;
+}
+
+.InfComments div {
+    display: flex;
+    align-items: center;
+
+}
+
+.propertisConsultant {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.propertisConsultant div span {
+    display: block;
+    font-size: 13px;
+}
+
+.propertisConsultant div span:first-child {
+    color: rgb(181, 181, 181);
+}
+
+.reservationBox {
+    margin: 2rem 0;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.reservationBox span {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.reservationBox .timeItem span {
+    display: block;
+}
+
+.reservationBox .timeItem button {
+    background-color: rgb(202, 2, 2);
+    padding: 0.8rem 0.4rem;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    color: #fff;
+    cursor: auto;
+    transition: 0.2s;
+}
+
+.reservationBox .timeItem button:hover {
+    background-color: rgb(161, 0, 0);
+    transition: 0.2s;
+}
+
+.reservationBox .timeItem span:first-child {
+    color: #aeadad;
+}
+
+.reservationBox .timeItem span:last-child {
+    color: #049e04;
+}
+
+.reservationBox .PriceItem {
+    display: flex;
+    align-items: center;
+    margin: 0.7rem;
+    justify-content: center;
+}
+
+.reservationBox .btnItem {
+    display: flex;
+    align-items: center;
+    margin: 0.7rem;
+    justify-content: space-between;
+}
+
+.reservationBox .btnItem a {
+    display: block;
+    border: 1px solid var(--main_color);
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 14px;
+    transition: 0.4s;
+}
+
+.reservationBox .btnItem a {
+    background-color: var(--main_color);
+    color: #fff;
+    margin-left: 0.7rem;
+
+}
+
+.reservationBox .btnItem a:hover {
+    background-color: #032135;
+    transition: 0.4s;
+}
+
+.CommentsSection {
+    padding: 0.5rem 1rem;
+    background-color: #f3f6ff;
+}
+
+.commentItem {
+    background-color: #fff;
+    margin: 0.8rem 0;
+    border-radius: 14px;
+    padding: 0.857rem;
+}
+
+.StrengthsItem {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    height: 57px;
+}
+
+.StrengthsItem div {
+    display: flex;
+    align-items: center;
+    background-color: #effaf5;
+    padding: 4px 0.5rem;
+    color: #049e04;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.StrengthsItem div svg {
+    margin-left: 4px;
+}
+
+.About {
+    margin: 2rem 0;
+}
+
+.About p {
+    text-align: justify;
+    line-height: 35px;
+}
+
+.BoxShare {
+    background-color: #e6eeff;
+    border-radius: 14px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.BoxShare img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 4px;
+}
+
+.BoxShare div {
+    display: flex;
+    align-items: center;
+}
+
+.shareBtns button {
+    margin: 0 0.4rem;
+    font-size: 25px;
+    padding: 0.35rem;
+    border: 1px solid var(--main_color);
+    transition: 0.4s;
+    border-radius: 8px;
+}
+
+.shareBtns button:first-child:hover {
+    border: 1px solid #031725;
+    transition: 0.4s;
+
+}
+
+.shareBtns button:last-child {
+    background-color: var(--main_color);
+    color: #fff;
+}
+
+.shareBtns button:last-child:hover {
+    background-color: #042f4c;
+    transition: 0.4s;
+}
+
+.getRes {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.getRes svg {
+    background-color: rgb(219, 0, 0);
+    padding: 0.8rem;
+    font-size: 60px;
+    color: #fff;
+    border-radius: 22px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.getRes svg:hover {
+    background-color: rgb(178, 0, 0);
+    transition: 0.4s;
+}
+
+.getRes span {
+    background-color: #7d7d7d;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 6px;
+    margin-right: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Modal */
+@media screen and (min-width: 768px) {
+    .modal {
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 1rem;
+    position: fixed;
+    top: 25%;
+    z-index: 2;
+    right: 0;
+    left: 0;
+}
+
+.bgModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000080;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Modal */
+.modal ul {
+    list-style: disc;
+    padding: 0 15px;
+    font-size: 14px;
+    margin: 12px 0;
+}
+
+.modal div {
+    display: flex;
+}
+
+.modal div button {
+    padding: 0.3rem;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.modal div button:first-child {
+    display: block;
+    width: 100%;
+    background-color: rgb(228, 0, 0);
+    margin-left: 6px;
+    color: #fff;
+}
+
+.modal div button:first-child:hover {
+    transition: 0.4s;
+    background-color: rgb(181, 0, 0);
+}
+
+.modal div button:last-child {
+    border: 1px solid black;
+}
+
+.modal div button:last-child:hover {
+    transition: 0.4s;
+    border: 1px solid rgb(208, 208, 208);
+}
+
+.boxIconeSh {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+.boxIconeSh svg {
+    font-size: 30px;
+    margin: 0 0.5rem;
+}

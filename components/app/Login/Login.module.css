@@ -1,0 +1,28 @@
+.btnSendData {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+}
+
+.btnSendData:hover {
+    background-color: #052c47;
+    transition: 0.4s;
+}
+.inpNumb input {
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 1.2px solid rgb(230, 230, 230);
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.inpNumb input:focus {
+    border: 1.2px solid rgb(79, 101, 239);
+
+}

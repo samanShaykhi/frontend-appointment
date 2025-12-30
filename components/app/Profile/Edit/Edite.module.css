@@ -1,0 +1,157 @@
+.headPage {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 0.5rem;
+}
+
+.headPage span {
+    display: block;
+    margin: 0 auto;
+}
+
+.headPage svg {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.headInfPr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    border-bottom: 1.2px solid #cbcbcb;
+    padding-bottom: 0.7rem;
+}
+
+.headInfPr span {
+    color: #084873;
+    font-size: 18.5px;
+}
+
+
+.InpForm input,
+.InpForm textarea {
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 1.2px solid rgb(230, 230, 230);
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.InpForm input:focus,
+.InpForm textarea:focus {
+    border: 1.2px solid rgb(79, 101, 239);
+
+}
+
+.InpForm div label {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.BtnStatus h5 {
+    color: #687a86;
+}
+
+.BtnStatus div {
+    display: flex;
+    align-items: center;
+}
+
+.BtnStatus div span {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 8px;
+}
+
+.activeBTN {
+    background-color: var(--main_color);
+    color: #fff;
+}
+
+.ItemBirth {
+    width: 100%;
+    position: relative;
+}
+
+.DateBirth {
+    display: flex;
+    align-items: center;
+}
+
+.ItemBirth .InputDateBirth {
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 1.2px solid rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+}
+
+.ModalDateBirth {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    height: 210px;
+    overflow-y: auto;
+    background-color: #fff;
+    width: 100%;
+    top: 74px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    padding: 0.4rem;
+}
+
+.ModalDateBirth ul li {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin: 0.65rem 0.45rem;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.ModalDateBirth ul li:last-child {
+    border-bottom: none !important;
+
+}
+
+.btnSendData {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+}
+
+.btnSendData:hover {
+    background-color: #052c47;
+    transition: 0.4s;
+}
+
+.sendDateNodrap {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: var(--main_color);
+    color: #fff;
+    transition: 0.4s;
+    margin-top: 1rem;
+    cursor: no-drop !important;
+    opacity: 0.6;
+    background-color: rgb(146, 146, 146) !important;
+}
