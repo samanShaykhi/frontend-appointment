@@ -1,5 +1,5 @@
-import Article from "@/components/app/Article/Article";
+import ArticleLayout from "@/components/app/Article/ArticleLayout";
 
 export default async function page() {
-    return <Article />
+    return <ArticleLayout />
 }
