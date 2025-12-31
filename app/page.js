@@ -1,3 +1,4 @@
+//!$ 
 import Index from "@/components/Index";
 import { baseUrl } from "@/components/utils/url";
 const getArticle = async () => {
