@@ -3,9 +3,8 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '3010',
+                protocol: 'https',
+                hostname: 'nivato.ir',
                 pathname: '/public/**',
             },
         ],

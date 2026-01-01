@@ -345,7 +345,7 @@ function AddConsultant() {
                         </div>
                         <div ref={refInputamount} className={styleExampel.ItemInpCons}>
                             <label className={styleExampel.labelInpSCons} >مبلغ جلسات</label>
-                            <input onChange={(e) => setphoneNumber(e.target.value)} placeholder='مبلغ جلسات را بنویسید' type="number" />
+                            <input onChange={(e) => setamount(e.target.value)} placeholder='مبلغ جلسات را بنویسید' type="number" />
                             {messageamount && <span className='text-[red] block text-[16px] font-bold' > {messageamount} </span>}
                         </div>
                         <div ref={refInputImage} className={styleExampel.ItemInpCons}>
