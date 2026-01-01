@@ -196,12 +196,10 @@ function AddConsultant() {
         if (!amount) {
             setmessageamount('مبلغ الزامی می باشد')
         } else {
-            if (amount.length < 4) {
+            if (amount.length < 3) {
                 setmessageamount('مبلغ نباید کمتر از4 کاراکتر باشد')
             }
-            if (amount.length > 20) {
-                setmessageamount('مبلغ نباید بیشتر از 20 کاراکتر باشد')
-            }
+            
         }
         if (!AboutMe) {
             setmessageAboutMe('توضیحات مشاور الزامی می باشد')
@@ -239,7 +237,7 @@ function AddConsultant() {
         if (!phoneNumber || phoneNumber.length < 11 || phoneNumber.length > 11) return window.scrollTo(0, refInputPhonNumber.current.offsetTop)
         if (!fileImage) return window.scrollTo(0, refInputImage.current.offsetTop)
         if (relatedCategories.length === 0) return window.scrollTo(0, refInputRelatedCategories.current.offsetTop)
-        if (!amount || amount.length < 20 || amount.length > 1000) return window.scrollTo(0, refInputamount.current.offsetTop)
+        if (!amount || amount.length < 3 || amount.length > 8) return window.scrollTo(0, refInputamount.current.offsetTop)
         if (!AboutMe || AboutMe.length < 20 || AboutMe.length > 1000) return window.scrollTo(0, refInputAboutMe.current.offsetTop)
         if (!fileVideo) return window.scrollTo(0, refInputVideo.current.offsetTop)
         if (!experience) return window.scrollTo(0, refInputExperience.current.offsetTop)
