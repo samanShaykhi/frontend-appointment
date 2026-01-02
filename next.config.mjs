@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'nivato.ir',
+                hostname: 'api.nivato.ir',
                 pathname: '/**',
             },
         ],
