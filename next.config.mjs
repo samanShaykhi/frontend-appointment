@@ -5,7 +5,7 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'nivato.ir',
-                pathname: '/public/**',
+                pathname: '/**',
             },
         ],
     },

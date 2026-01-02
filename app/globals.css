@@ -225,3 +225,14 @@ body {
 }
 
 /*  Progress bar */
+/* Toast Styles  */
+@media only screen and (max-width: 480px) {
+  .Toastify__toast-container--bottom-left,
+  .Toastify__toast-container--bottom-center,
+  .Toastify__toast-container--bottom-right {
+    right: 11px !important;
+    width: 95% !important;
+  }
+}
+
+/* Toast Styles  */
