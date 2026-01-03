@@ -79,7 +79,6 @@ function PageCenter({ consultant, expertise, articles }) {
             <div className="custom-container" >
                 <div className={style.categoryTitle} >
                     <h4 className={style.ConsultantsTitle} >دسته بندی ها</h4>
-                    <Link href='/' >همه</Link>
                 </div>
                 <div className={style.sectionCategory} >
                     {expertise.map((item) => {
@@ -133,8 +132,10 @@ function PageCenter({ consultant, expertise, articles }) {
                             <Link key={item._id} href={`/articles/${item.articleTitle.trim().replace(/\s+/g, "-")}`}>
 
                                 <div className={style.BoxArticleS} >
-                                    <Image width={1000} height={1000} src={`${baseUrl}/${item.thumbnail}`} alt=" cosultant" />
-                                    <h4>{item.articleTitle}</h4>
+                                    <div className={style.boxThumbArt} >
+                                        <Image width={1000} height={1000} src={`${baseUrl}/${item.thumbnail}`} alt=" cosultant" />
+                                    </div>
+                                    <h4>{item.articleTitle.length > 70 ? `${item.articleTitle.slice(0, 70)}...` : item.articleTitle}</h4>
                                 </div>
                             </Link>
                         )

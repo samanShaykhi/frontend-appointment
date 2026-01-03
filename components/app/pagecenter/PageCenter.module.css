@@ -167,15 +167,25 @@
 /** why we */
 
 /** articles */
-
-.BoxArticleS img {
+.boxThumbArt {
+    width: 100%;
+    height: 149px;
+    display: inline-flex;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(56, 56, 55, 0.1));
     border-radius: 25px;
+    overflow: hidden;
+}
+
+.boxThumbArt img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .BoxArticleS h4 {
     margin-top: 0.5rem;
     font-size: 14px;
     color: #333;
+    text-align: justify;
 }
 
 .btnMorDis {

@@ -112,8 +112,8 @@ function Notificathons() {
     }
 
     return (
-        <>
-            <div className="custom-container" >
+        <div className={style.sec}>
+            <div className="custom-container mb-9" >
                 <div className={style.headPage} >
                     <BsChevronRight onClick={() => router.back()} />
                     <span>اعلان ها</span>
@@ -167,7 +167,7 @@ function Notificathons() {
                 }
             </div >
             <Footer />
-        </>
+        </div>
     );
 }
 

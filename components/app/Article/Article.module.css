@@ -8,8 +8,9 @@
 }
 
 .ConsultantBG {
-    width: 106px;
+    width: 200px;
     height: 124px;
+    display: inline-flex;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(56, 56, 55, 0.1));
     border-radius: 0 28px 28px 0;
     overflow: hidden;

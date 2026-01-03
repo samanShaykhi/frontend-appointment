@@ -270,6 +270,8 @@
 }
 
 .modal {
+    width: 90%;
+    margin: auto;
     background-color: #fff;
     border-radius: 18px;
     padding: 1rem;

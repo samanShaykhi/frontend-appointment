@@ -9,7 +9,7 @@ import { MdCastForEducation, MdOutlineSupportAgent } from "react-icons/md";
 import { PiWarningCircleLight } from "react-icons/pi";
 import { GoLaw } from "react-icons/go";
 import { CiLogout } from "react-icons/ci";
-import { BsCalendar2Check, BsCalendar2Plus } from "react-icons/bs";
+import { BsCalendar2Check, BsCalendar2Plus, BsPersonAdd } from "react-icons/bs";
 import { ContextStates } from "@/components/utils/context/Index";
 import SpinnerLoading from "@/components/utils/Spinner/SpinnerLoading";
 import { messageCustom } from "@/components/utils/message/message";
@@ -18,6 +18,8 @@ import ServerReset from "../utils/ErrorPages/ServerReset";
 import { axiosConfig } from "@/components/utils/axios";
 import { useRouter } from "next/navigation";
 import { FaBookReader } from "react-icons/fa";
+import { GrArticle } from "react-icons/gr";
+import { BiCommentCheck } from "react-icons/bi";
 function Profile() {
     const { curentUser, funcGetUser, setcurentUser, setaccessToken } = ContextStates()
     const [ErrorServer, setErrorServer] = useState();
@@ -56,7 +58,7 @@ function Profile() {
     }
 
     return (
-        <Fragment>
+        <div className="pb-[2rem]">
             <div className={style.ProgileBG} >
                 <div className="custom-container" >
                     {curentUser ?
@@ -69,7 +71,7 @@ function Profile() {
                                         </div>
                                         <div>
                                             <span>ویرایش اطلاعات کاربری</span>
-                                            <span>09168922125</span>
+                                            <span>{curentUser.phoneNumber}</span>
                                         </div>
                                     </div>
                                     <div>
@@ -137,7 +139,7 @@ function Profile() {
                                 {curentUser.role === 'admin' && <div className={style.PItem} >
                                     <Link href='/profile/add-consultant'>
                                         <div>
-                                            <FaRegAddressCard />
+                                            <BsPersonAdd />
                                             <span>اضافه کردن مشاور</span>
                                         </div>
                                         <div >
@@ -148,7 +150,7 @@ function Profile() {
                                 {curentUser.role === 'admin' && <div className={style.PItem} >
                                     <Link href='/profile/article'>
                                         <div>
-                                            <FaRegAddressCard />
+                                            <GrArticle />
                                             <span>مقالات</span>
                                         </div>
                                         <div >
@@ -159,7 +161,7 @@ function Profile() {
                                 {curentUser.role === 'admin' && <div className={style.PItem} >
                                     <Link href='/profile/comment-status'>
                                         <div>
-                                            <FaRegAddressCard />
+                                            <BiCommentCheck />
                                             <span>کامنت های تایید نشده</span>
                                         </div>
                                         <div >
@@ -230,7 +232,7 @@ function Profile() {
                 </div>
             </div>
             <Footer />
-        </Fragment >
+        </div >
     );
 }
 

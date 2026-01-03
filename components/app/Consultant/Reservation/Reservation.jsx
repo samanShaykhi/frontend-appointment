@@ -114,6 +114,8 @@ function Reservation({ days, IDConsultant, reservations }) {
             if (error.status === 401) {
                 messageCustom('ورود شما منقضی شده', 'error', 6000);
                 return router.replace('/login')
+            } else if (error.status === 301) {
+                messageCustom('این نوبت توسط فرد دیگیری رزرو شده', 'error', 7000);
             } else if (error.status === 404) {
                 router.replace('/not-found');
             } else if (error.status === 500) {
@@ -145,7 +147,7 @@ function Reservation({ days, IDConsultant, reservations }) {
             </div>
             {curentUser ?
                 <>
-                {console.log(days)}
+                    {console.log(days)}
                     <div className="w-full space-y-6 mb-[1rem]">
 
                         <div className="relative w-full">

@@ -206,9 +206,10 @@ function ConsultantSingle({ consultant }) {
             >
                 {/* Modal box */}
                 <div
-                    className={`bg-white rounded-lg p-6 max-w-sm w-full shadow-lg transform transition-transform duration-300 z-[10000] ${isOpen ? 'scale-100' : 'scale-90'
-                        }`}
-                >
+                    className={`bg-white rounded-lg p-6 max-w-sm  shadow-lg transform transition-transform duration-300 z-[10000] w-[90%] ${isOpen ? 'scale-100' : 'scale-90'
+                    }`}
+                    >
+                    <span className='mb-3 font-bold' > اشتراک گذاری </span>
                     <div className={style.boxIconeSh} >
                         <ShareButtons />
                     </div>
@@ -221,8 +222,8 @@ function ConsultantSingle({ consultant }) {
                 </div>
             </div>
             <div className={`${style.videoConsultan} relative`} >
-                <video className='rounded-b-2xl w-full object-cover h-[270px]' src='/video/0_3.mp4' poster={`${baseUrl}/public/consultant/images/${consultant.consultant.image}`} controls>
-                    <source src='/video/0_3.mp4' type="video/mp4" />
+                <video className='rounded-b-2xl w-full object-cover h-[270px]' src={`${baseUrl}/public/consultant/video/${consultant.consultant.video}`} poster={`${baseUrl}/public/consultant/images/${consultant.consultant.image}`} controls>
+                    <source src={`${baseUrl}/public/consultant/video/${consultant.consultant.video}`} type="video/mp4" />
                 </video>
                 <div className={style.btnHeadVideo} >
                     <BsChevronRight onClick={() => router.push('/')} />
@@ -301,7 +302,7 @@ function ConsultantSingle({ consultant }) {
                     <span>هر جلسه</span>
                     <span className='mr-2' >60 دقیقه</span>
                     <div className='h-4 w-[1px] bg-purple-brand-color-40 mx-4 flex-none bg-[#b8cdff]' ></div>
-                    <span>460 هزار تومان</span>
+                    <span> {consultant.amount ? `${consultant.amount} هزار تومان` : '460 هزار تومان'} </span>
                 </div>
                 {!noneAp && <div className={style.btnItem} >
                     <Link className={style.reservationBox} href={`/reservations/${consultant.consultant._id}`} >
@@ -326,7 +327,7 @@ function ConsultantSingle({ consultant }) {
                                                 </div>
                                                 {item.date && <div> <span className='text-[12px] text-[#a0a0a0]' > {timeAgoJalali(item.date)} </span> </div>}
                                             </div>
-                                            <span className='bg-[green] rounded-[8px] text-white py-[2px] px-[5px]' >{item.score}</span>
+                                            <span className='bg-[green] rounded-[8px] text-white py-[2px] px-[5px]' >{`${item.score}.0`}</span>
                                         </div>
                                         <div>
                                             <p className='text-justify' >

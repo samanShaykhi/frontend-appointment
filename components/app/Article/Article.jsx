@@ -72,7 +72,7 @@ export default function Article() {
                                                         <div className={style.ConsultantBG} >
                                                             <Image width={1000} height={1000} src={`${baseUrl}/${item.thumbnail}`} alt={`${item.firstName} ${item.lastName}`} />
                                                         </div>
-                                                        <div className='flex flex-col mr-[10px]' >
+                                                        <div className='flex flex-col mr-[10px] w-full' >
                                                             <h3 className="text-black text-[16px]" > {item.articleTitle} </h3>
                                                         </div>
                                                     </div>

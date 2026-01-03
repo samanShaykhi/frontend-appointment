@@ -48,9 +48,7 @@ function Footer() {
             <div className={style.propertisBoxFooter} >
                 <Link href='/profile/reservations-me'>
                     <LuCalendarRange />
-                    <span>
-                        جلسات من
-                    </span>
+                    <span>جلسات</span>
                 </Link>
             </div>
             {curentUser && <div className={style.propertisBoxFooter} >
@@ -60,9 +58,7 @@ function Footer() {
                     </div>
                     }
                     <IoNotificationsSharp />
-                    <span>
-                        اعلان ها
-                    </span>
+                    <span>پیغامات</span>
                 </Link>
             </div >}
             <div className={style.propertisBoxFooter} >

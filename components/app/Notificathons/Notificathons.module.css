@@ -1,3 +1,7 @@
+.sec {
+  padding-bottom: 2rem;
+}
+
 .headPage {
     display: flex;
     align-items: center;

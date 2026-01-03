@@ -42,15 +42,15 @@ function View() {
                         </div>
                         <div className={style.infItem} >
                             <span>تاریخ تولد</span>
-                            <span>1378/3/18</span>
+                            <span>-/-/-</span>
                         </div>
                         <div className={style.infItem} >
                             <span>جنسیت</span>
-                            <span>سایر</span>
+                            <span>-</span>
                         </div>
                         <div className={style.infItem} >
                             <span>محل سکونت</span>
-                            <span>اصفهان</span>
+                            <span>-</span>
                         </div>
                     </div>
                 </div>
