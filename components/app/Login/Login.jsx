@@ -11,6 +11,8 @@ import ServerError from '../utils/ErrorPages/ServerError';
 import ServerReset from '../utils/ErrorPages/ServerReset';
 function Login() {
     const { accessToken, accessTokenLoading, curentPath, setcurentUser, setaccessToken } = ContextStates()
+    const [curentPage, setcurentPage] = useState('phone')
+    const [codeOTP, setcodeOTP] = useState()
     const router = useRouter()
     useEffect(() => {
         if (accessToken) return router.replace('/profile')
@@ -26,19 +28,25 @@ function Login() {
                 data: { phoneNumber },
             })
             if (sendData.status === 200) {
-                messageCustom('ورود انجام شد.', 'success', 5000)
-                setaccessToken(sendData.data.accessToken)
-                setcurentUser(sendData.data.user)
-                console.log(sendData.data)
-                if (curentPath) {
-                    router.replace(curentPath)
-                } else {
-                    router.replace('/')
-                }
+                messageCustom('رمز برای شما ارسال شد', 'success', 5000)
+                setcurentPage('OTP')
+                // setaccessToken(sendData.data.accessToken)
+                // setcurentUser(sendData.data.user)
+                // if (curentPath) {
+                //     router.replace(curentPath)
+                // } else {
+                //     router.replace('/')
+                // }
+
             }
         } catch (error) {
             if (error.status === 301) {
                 setmessagesError(error.data.message.errors)
+            } else if (error.status === 430) {
+                messageCustom('عملیات ارسال رمز شکست خورد بعدا تلاش کنید', 'error', 6000);
+
+            } else if (error.status === 429) {
+                messageCustom('2 دقیقه دیگیر درخواست دهید.', 'error', 6000);
             } else if (error.status === 500) {
                 setErrorServer('SERVER_ERROR')
             } else if (error.status === 503) {
@@ -48,6 +56,40 @@ function Login() {
             }
         }
     }
+    const sendCodeOTP = async () => {
+        try {
+            const sendData = await axiosConfig('/user/vrifyotp', {
+                method: "POST",
+                headers: { "Content-type": "application/json" },
+                data: { codeOTP, phoneNumber },
+            })
+            if (sendData.status === 200) {
+                setaccessToken(sendData.data.accessToken)
+                setcurentUser(sendData.data.user)
+                if (curentPath) {
+                    router.replace(curentPath)
+                } else {
+                    router.replace('/')
+                }
+            }
+        } catch (error) {
+            if (error.status === 301) {
+                setmessagesError(error.data.message.errors)
+            } else if (error.status === 430) {
+                messageCustom('کد اشتباست', 'error', 6000);
+            } else if (error.status === 429) {
+                messageCustom('2 دقیقه دیگیر درخواست دهید.', 'error', 6000);
+            } else if (error.status === 500) {
+                setErrorServer('SERVER_ERROR')
+            } else if (error.status === 503) {
+                messageCustom('error code 503', 'error', 6000);
+            } else {
+                setErrorServer('SERVER_RESET')
+            }
+        }
+    }
+
+
     if (ErrorServer === 'SERVER_ERROR') {
         return (
             <ServerError />
@@ -61,23 +103,37 @@ function Login() {
         <div className="custom-container">
             {!accessTokenLoading && !accessToken ?
                 <>
-                    <h4 className="font-semibold text-2xl text-gray-70"> شماره موبایل <br /> خود را وارد کنید </h4>
-                    <div>
-                        {messagesError.map((error, index) => {
-                            return (
-                                <div key={index} className='flex items-center my-2 text-[#fc4040]' >
-                                    <PiWarningOctagon className='ml-1' />
-                                    <span key={index} > {error} </span>
-                                </div>
-                            )
-                        })}
-                    </div>
-                    <div className={style.inpNumb} >
-                        <input onChange={(e) => setphoneNumber(e.target.value)} placeholder='مثال : 09168922125 ' type="text" />
-                    </div>
-                    <div className='mt-4' >
-                        <button onClick={sendUser} className={style.btnSendData} >   ارسال  </button>
-                    </div>
+                    {curentPage === 'phone' ?
+                        <>
+                            <h4 className="font-semibold text-2xl text-gray-70"> شماره موبایل <br /> خود را وارد کنید </h4>
+                            <div>
+                                {messagesError.map((error, index) => {
+                                    return (
+                                        <div key={index} className='flex items-center my-2 text-[#fc4040]' >
+                                            <PiWarningOctagon className='ml-1' />
+                                            <span key={index} > {error} </span>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                            <div className={style.inpNumb} >
+                                <input onChange={(e) => setphoneNumber(e.target.value)} placeholder='مثال : 09168922125 ' type="text" />
+                            </div>
+                            <div className='mt-4' >
+                                <button onClick={sendUser} className={style.btnSendData} >   ارسال  </button>
+                            </div>
+                        </>
+                        :
+                        <>
+                            <h4 className="font-semibold text-2xl text-gray-70"> کد ارسال شده را وارد کنید </h4>
+                            <div className={style.inpNumb} >
+                                <input onChange={(e) => setcodeOTP(e.target.value)} placeholder='کد را وارد کنید' type="number" />
+                            </div>
+                            <div className='mt-4' >
+                                <button onClick={sendCodeOTP} className={style.btnSendData} >   ارسال  </button>
+                            </div>
+                        </>
+                    }
                 </>
                 :
                 null
