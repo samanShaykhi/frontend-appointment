@@ -9,11 +9,11 @@ import { ContextStates } from '@/components/utils/context/Index';
 import SpinnerLoading from '@/components/utils/Spinner/SpinnerLoading';
 import ServerError from '../utils/ErrorPages/ServerError';
 import ServerReset from '../utils/ErrorPages/ServerReset';
+import OTPCodeInput from './OTPCodeInput';
 function Login() {
-    const { accessToken, accessTokenLoading, curentPath, setcurentUser, setaccessToken } = ContextStates()
-    const [curentPage, setcurentPage] = useState('phone')
-    const [codeOTP, setcodeOTP] = useState()
+    const { accessToken, accessTokenLoading } = ContextStates()
     const router = useRouter()
+    const [curentPage, setcurentPage] = useState('phone')
     useEffect(() => {
         if (accessToken) return router.replace('/profile')
     }, [])
@@ -48,42 +48,6 @@ function Login() {
             }
         }
     }
-    const sendCodeOTP = async () => {
-        try {
-            const sendData = await axiosConfig('/user/vrifyotp', {
-                method: "POST",
-                headers: { "Content-type": "application/json" },
-                data: { codeOTP, phoneNumber },
-            })
-            if (sendData.status === 200) {
-                setaccessToken(sendData.data.accessToken)
-                setcurentUser(sendData.data.user)
-                if (curentPath) {
-                    router.replace(curentPath)
-                } else {
-                    router.replace('/')
-                }
-            }
-        } catch (error) {
-            if (error.status === 403) {
-                messageCustom(error.data.message, 'error', 6000);
-            } else if (error.status === 400) {
-                messageCustom(error.data.message, 'error', 6000);
-            } else if (error.status === 429) {
-                messageCustom(error.data.message, 'error', 6000);
-                setcurentPage('phone')
-                setcodeOTP('')
-            } else if (error.status === 500) {
-                setErrorServer('SERVER_ERROR')
-            } else if (error.status === 503) {
-                messageCustom('error code 503', 'error', 6000);
-            } else {
-                setErrorServer('SERVER_RESET')
-            }
-        }
-    }
-
-
     if (ErrorServer === 'SERVER_ERROR') {
         return (
             <ServerError />
@@ -118,15 +82,10 @@ function Login() {
                             </div>
                         </>
                         :
-                        <>
+                        <div className='mt-3'>
                             <h4 className="font-semibold text-2xl text-gray-70"> کد ارسال شده را وارد کنید </h4>
-                            <div className={style.inpNumb} >
-                                <input value={codeOTP} onChange={(e) => setcodeOTP(e.target.value)} placeholder='کد را وارد کنید' type="number" />
-                            </div>
-                            <div className='mt-4' >
-                                <button onClick={sendCodeOTP} className={style.btnSendData} >   ارسال  </button>
-                            </div>
-                        </>
+                            <OTPCodeInput sendUser={sendUser} phoneNumber={phoneNumber} setcurentPage={setcurentPage} />
+                        </div>
                     }
                 </>
                 :
