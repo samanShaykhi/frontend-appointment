@@ -11,7 +11,7 @@ import ServerError from '../utils/ErrorPages/ServerError';
 import ServerReset from '../utils/ErrorPages/ServerReset';
 import OTPCodeInput from './OTPCodeInput';
 function Login() {
-    const { accessToken, accessTokenLoading } = ContextStates()
+    const { accessToken, accessTokenLoading, setcurentUser, setaccessToken, curentPath } = ContextStates()
     const router = useRouter()
     const [curentPage, setcurentPage] = useState('phone')
     useEffect(() => {
@@ -22,14 +22,21 @@ function Login() {
     const [ErrorServer, setErrorServer] = useState();
     const sendUser = async () => {
         try {
-            const sendData = await axiosConfig('/user/sinin', {
+            const sendData = await axiosConfig('/user/loginuser', {
                 method: "POST",
                 headers: { "Content-type": "application/json" },
                 data: { phoneNumber },
             })
             if (sendData.status === 200) {
-                messageCustom('رمز برای شما ارسال شد', 'success', 5000)
-                setcurentPage('OTP')
+                messageCustom('ورود انجام شد', 'success', 5000)
+                setaccessToken(sendData.data.accessToken)
+                setcurentUser(sendData.data.user)
+                if (curentPath) {
+                    router.replace(curentPath)
+                } else {
+                    router.replace('/')
+                }
+                // setcurentPage('OTP')
             }
         } catch (error) {
             if (error.status === 301) {
